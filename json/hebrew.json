@@ -1,0 +1,110 @@
+{
+	"alef": {
+		"symbol": "א",
+		"name": "Alef"
+	},
+	"bet": {
+		"symbol": "ב",
+		"name": "Bet"
+	},
+	"gimel": {
+		"symbol": "ג",
+		"name": "Gimel"
+	},
+	"dalet": {
+		"symbol": "ד",
+		"name": "Dalet"
+	},
+	"he": {
+		"symbol": "ה",
+		"name": "He"
+	},
+	"vav": {
+		"symbol": "ו",
+		"name": "Vav"
+	},
+	"zayin": {
+		"symbol": "ז",
+		"name": "Zayin"
+	},
+	"chet": {
+		"symbol": "ח",
+		"name": "Chet"
+	},
+	"tet": {
+		"symbol": "ט",
+		"name": "Tet"
+	},
+	"yod": {
+		"symbol": "י",
+		"name": "Yod"
+	},
+	"kaf": {
+		"symbol": "כ",
+		"name": "Kaf"
+	},
+	"kaf-s": {
+		"symbol": "ך",
+		"name": "Kaf (s)"
+	},
+	"lamed": {
+		"symbol": "ל",
+		"name": "Lamed"
+	},
+	"mem": {
+		"symbol": "מ",
+		"name": "Mem"
+	},
+	"mem-s": {
+		"symbol": "ם",
+		"name": "Mem (s)"
+	},
+	"nun": {
+		"symbol": "נ",
+		"name": "Nun"
+	},
+	"nun-s": {
+		"symbol": "ן",
+		"name": "Nun (s)"
+	},
+	"samech": {
+		"symbol": "ס",
+		"name": "Samech"
+	},
+	"ayin": {
+		"symbol": "ע",
+		"name": "Ayin"
+	},
+	"pe": {
+		"symbol": "פ",
+		"name": "Pe"
+	},
+	"pe-s": {
+		"symbol": "ף",
+		"name": "Pe (s)"
+	},
+	"tsade": {
+		"symbol": "צ",
+		"name": "Tsade"
+	},
+	"tsade-s": {
+		"symbol": "ץ",
+		"name": "Tsade (s)"
+	},
+	"qof": {
+		"symbol": "ק",
+		"name": "Qof"
+	},
+	"resh": {
+		"symbol": "ר",
+		"name": "Resh"
+	},
+	"shin": {
+		"symbol": "ש",
+		"name": "Shin"
+	},
+	"tav": {
+		"symbol": "ת",
+		"name": "Tav"
+	}
+}

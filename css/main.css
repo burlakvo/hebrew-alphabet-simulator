@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'DanaYad';
+    src: url('../fonts/DanaYadAlefAlefAlef-Normal.eot');
+    src: url('../fonts/DanaYadAlefAlefAlef-Normal.eot') format('embedded-opentype'),
+         url('../fonts/DanaYadAlefAlefAlef-Normal.otf'),
+         url('../fonts/DanaYadAlefAlefAlef-Normal.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font-size: 1.5rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.places,
+.place_name,
+.place_holder,
+.letters,
+.letter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.places,
+.letters {
+    justify-content: start;
+    gap: 10px;
+}
+
+.place_name,
+.place_holder,
+.letter {
+    justify-content: center;
+}
+
+.places {
+    margin: 10px;
+}
+
+.place {
+    display: grid;
+    grid-template-areas:
+        "n n"
+        "p h";
+}
+
+.place_name {
+    grid-area: n;
+    padding: 5px;
+    background-color: var(--color-gray);
+}
+
+.place_holder {
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--color-gray);
+}
+
+.place_holder.printed {
+    grid-area: p;
+}
+
+.place_holder.handwrited {
+    grid-area: h;
+}
+
+.place_holder.riched {
+    background-color: var(--color-success);
+}
+
+.letters {
+    margin: 10px;
+}
+
+.letter {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-gray);
+    font-size: 2rem;
+}
+
+.letter.printed {
+    font-family: 'Rubik', sans-serif;
+}
+
+.letter.handwrited {
+    font-family: 'DanaYad', cursive;
+}
