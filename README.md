@@ -53,13 +53,13 @@ Version: 1.0.1
 
 ## Resources used
 
-- (Draggable API)[https://api.jqueryui.com/draggable/]
-- (Droppable API)[https://api.jqueryui.com/droppable/]
-- (Shuffle dom elements script)[https://css-tricks.com/snippets/jquery/shuffle-dom-elements/]
-- (Main font)[https://fonts.google.com/specimen/Rubik?query=rubik]
-- (Handwritten font)[https://alefalefalef.co.il/en/resources/פונטים-בחינם/]
-- (Hebrew alphabet)[https://en.wikipedia.org/wiki/Hebrew_alphabet]
-- (Favicon generator)[https://favicon.io/]
+- [Draggable API](https://api.jqueryui.com/draggable/)
+- [Droppable API](https://api.jqueryui.com/droppable/)
+- [Shuffle dom elements script](https://css-tricks.com/snippets/jquery/shuffle-dom-elements/)
+- [Main font](https://fonts.google.com/specimen/Rubik?query=rubik)
+- [Handwritten font](https://alefalefalef.co.il/en/resources/פונטים-בחינם/)
+- [Hebrew alphabet](https://en.wikipedia.org/wiki/Hebrew_alphabet)
+- [Favicon generator](https://favicon.io/)
 
 ## Inspired by
 
