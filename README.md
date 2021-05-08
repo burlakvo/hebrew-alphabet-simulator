@@ -1,11 +1,10 @@
-Hebrew alphabet simulator
-=====
+# Hebrew alphabet simulator
 
 Version: 1.0.1
 
-# Development
+## Development
 
-## Ideas
+### Ideas
 
 - timer
 - instruction
@@ -15,43 +14,43 @@ Version: 1.0.1
 - switch light\dark themes
 - use promise in js instead of `async:false`
 
-## Roadmap
+### Roadmap
 
-### in 1.1.0
+#### in 1.1.0
 
 - move example to popup
 
-### in 1.2.0
+#### in 1.2.0
 
 - add footer with link to github repo
 - add header with title and buttons (start & help)
 
-### in 1.3.0
+#### in 1.3.0
 
 - use click instead drag & drop to move letters
 - show chosen letter in header
 
-### in 1.4.0
+#### in 1.4.0
 
 - adapt for mobile
 
-### in 1.5.0
+#### in 1.5.0
 
 - to be continued...
 
-## Change log
+### Change log
 
-### 1.0.1
+#### 1.0.1
 
 - add favicon
 
-### 1.0.0
+#### 1.0.0
 
 - first commit =)
 
-# Additional info
+## Additional info
 
-## Resources used
+### Resources used
 
 - [Draggable API](https://api.jqueryui.com/draggable/)
 - [Droppable API](https://api.jqueryui.com/droppable/)
@@ -61,6 +60,4 @@ Version: 1.0.1
 - [Hebrew alphabet](https://en.wikipedia.org/wiki/Hebrew_alphabet)
 - [Favicon generator](https://favicon.io/)
 
-## Inspired by
-
-http://mkipnis.ru/srv/srv_alphabet.php
+Inspired by <http://mkipnis.ru/srv/srv_alphabet.php>

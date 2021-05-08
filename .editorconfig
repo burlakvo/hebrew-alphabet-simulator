@@ -10,3 +10,6 @@ trim_trailing_whitespace = true
 
 [*.{md,js,css}]
 indent_style = space
+
+[*.md]
+insert_final_newline = true
