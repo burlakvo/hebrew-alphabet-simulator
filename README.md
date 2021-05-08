@@ -36,6 +36,10 @@ Version: 1.0.1
 
 #### in 1.5.0
 
+- language switch
+
+#### in 1.6.0
+
 - to be continued...
 
 ### Change log
