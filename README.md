@@ -1,6 +1,6 @@
 # Hebrew alphabet simulator
 
-Version: 1.0.1
+Version: 1.1.0
 
 ## Development
 
@@ -15,10 +15,6 @@ Version: 1.0.1
 - use promise in js instead of `async:false`
 
 ### Roadmap
-
-#### in 1.1.0
-
-- move example to popup
 
 #### in 1.2.0
 
@@ -40,13 +36,10 @@ Version: 1.0.1
 
 ### Change log
 
-#### 1.0.1
+#### 1.1.0
 
-- add favicon
-
-#### 1.0.0
-
-- first commit =)
+- move example to popup
+- update .gitignore
 
 ## Additional info
 
