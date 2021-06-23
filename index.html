@@ -19,6 +19,23 @@
 	<script src="script.js"></script>
 </head>
 <body>
+	<header>
+		<h1 class="header_title">Learn Hebrew alphabet</h1>
+		<nav class="header_navigation">
+			<button class="btn btn__action" data-action="show_popup">Help</button>
+			<button class="btn btn__action" data-action="start">Start</button>
+		</nav>
+	</header>
+	<main>
+		<div class="places"></div>
+		<div class="letters"></div>
+	</main>
+	<footer>
+		<div class="copyright">made by Burlakov</div>
+		<ul class="links">
+			<li class="link"><a href="https://github.com/burlakvo/hebrew-alphabet-simulator"><img src="./images/github.png" alt="GitHub"></a></li>
+		</ul>
+	</footer>
 	<div class="popup">
 		<div class="popup_body">
 			<p>When you start, your task will be put all letters on their places: printed to the left part, hand written - right</p>
@@ -32,12 +49,5 @@
 			<button class="btn btn__action" data-action="close_popup">Got it</button>
 		</div>
 	</div>
-	<div class="btn_set">
-		<button class="btn btn__action" data-action="show_example">Show example</button>
-		<button class="btn btn__action" data-action="start">Start</button>
-	</div>
-	<hr>
-	<div class="places"></div>
-	<div class="letters"></div>
 </body>
 </html>

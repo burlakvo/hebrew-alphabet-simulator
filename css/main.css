@@ -13,10 +13,46 @@ html {
 }
 
 body {
+    min-height: 100vh;
     margin: 0;
     font-size: 1.5rem;
     background-color: var(--color-white);
     color: var(--color-black);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "h"
+        "m"
+        "f";
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header {
+    grid-area: h;
+    border-bottom: 1px solid var(--color-black);
+}
+
+.header_title {
+    margin: 0;
+}
+
+main {
+    grid-area: m;
+}
+
+footer {
+    grid-area: f;
+}
+
+img {
+    vertical-align: middle;
 }
 
 .places,
@@ -124,4 +160,14 @@ body.popup__show .popup {
     min-width: 50%;
     padding: 10px;
     background-color: #fff;
+}
+
+.links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    display: inline-block;
 }

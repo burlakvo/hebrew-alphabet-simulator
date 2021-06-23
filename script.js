@@ -56,7 +56,7 @@ $(function() {
             case 'start':
                 fromBeginning()
                 break
-            case 'show_example':
+            case 'show_popup':
                 showPopup()
                 break
             case 'close_popup':
