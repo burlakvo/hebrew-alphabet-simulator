@@ -37,10 +37,10 @@ $(function() {
 
     //         const $place        = $('<div></div>').addClass('place')
     //         const $placeName    = $('<div></div>').addClass('place_name').text(name)
-    //         const $placeHolderP = $('<div></div>').addClass('place_holder riched printed').data('place', key).data('type', 'printed')
-    //         const $placeHolderH = $('<div></div>').addClass('place_holder riched handwrited').data('place', key).data('type', 'handwrited')
+    //         const $placeHolderP = $('<div></div>').addClass('place_holder achieved printed').data('place', key).data('type', 'printed')
+    //         const $placeHolderH = $('<div></div>').addClass('place_holder achieved handwritten').data('place', key).data('type', 'handwritten')
     //         const $letterP      = $('<div></div>').addClass('letter printed').text(symbol).data('is', key).data('type', 'printed')
-    //         const $letterH      = $('<div></div>').addClass('letter handwrited').text(symbol).data('is', key).data('type', 'handwrited')
+    //         const $letterH      = $('<div></div>').addClass('letter handwritten').text(symbol).data('is', key).data('type', 'handwritten')
 
     //         $placeHolderP.append($letterP)
     //         $placeHolderH.append($letterH)
@@ -49,8 +49,20 @@ $(function() {
     //     })
     // });
 
-    $('body').on('click', '.btn__start', function() {
-        fromBegining();
+    $('body').on('click', '.btn__action', function() {
+        const action = $(this).data('action')
+
+        switch (action) {
+            case 'start':
+                fromBeginning()
+                break
+            case 'show_example':
+                showPopup()
+                break
+            case 'close_popup':
+                hidePopup()
+                break
+        }
     })
 
     init()
@@ -85,10 +97,10 @@ $(function() {
 
             const $place        = $('<div></div>').addClass('place')
             const $placeName    = $('<div></div>').addClass('place_name').text(name)
-            const $placeHolderP = $('<div></div>').addClass('place_holder riched printed').data('place', key).data('type', 'printed')
-            const $placeHolderH = $('<div></div>').addClass('place_holder riched handwrited').data('place', key).data('type', 'handwrited')
+            const $placeHolderP = $('<div></div>').addClass('place_holder achieved printed').data('place', key).data('type', 'printed')
+            const $placeHolderH = $('<div></div>').addClass('place_holder achieved handwritten').data('place', key).data('type', 'handwritten')
             const $letterP      = $('<div></div>').addClass('letter printed').text(symbol).data('is', key).data('type', 'printed')
-            const $letterH      = $('<div></div>').addClass('letter handwrited').text(symbol).data('is', key).data('type', 'handwrited')
+            const $letterH      = $('<div></div>').addClass('letter handwritten').text(symbol).data('is', key).data('type', 'handwritten')
 
             $placeHolderP.append($letterP)
             $placeHolderH.append($letterH)
@@ -97,7 +109,7 @@ $(function() {
         })
     }
 
-    function fromBegining() {
+    function fromBeginning() {
         const $letters = $('.letters')
 
         $('.places .letter').each(function() {
@@ -110,13 +122,13 @@ $(function() {
             makeDraggable(this)
         })
 
-        $('.place_holder.riched').each(function() {
+        $('.place_holder.achieved').each(function() {
             const type  = $(this).data('type')
             const place = $(this).data('place')
 
             makeDroppable(this, place, type)
 
-            $(this).removeClass('riched')
+            $(this).removeClass('achieved')
         })
     }
 
@@ -137,7 +149,7 @@ $(function() {
                 return true
             },
             drop: function(event, ui) {
-                $(this).addClass('riched').droppable('destroy')
+                $(this).addClass('achieved').droppable('destroy')
                 $(ui.draggable[0]).draggable('destroy').css({
                     'position': '',
                     'left': '',
@@ -147,5 +159,13 @@ $(function() {
                 $(this).append($(ui.draggable[0]))
             },
         })
+    }
+
+    function showPopup() {
+        $('body').addClass('popup__show')
+    }
+
+    function hidePopup() {
+        $('body').removeClass('popup__show')
     }
 });

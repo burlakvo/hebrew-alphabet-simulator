@@ -35,10 +35,15 @@ body {
     gap: 10px;
 }
 
+.places.example {
+    justify-content: center;
+}
+
 .place_name,
 .place_holder,
 .letter {
     justify-content: center;
+    text-align: center;
 }
 
 .places {
@@ -68,11 +73,11 @@ body {
     grid-area: p;
 }
 
-.place_holder.handwrited {
+.place_holder.handwritten {
     grid-area: h;
 }
 
-.place_holder.riched {
+.place_holder.achieved {
     background-color: var(--color-success);
 }
 
@@ -91,6 +96,32 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
-.letter.handwrited {
+.letter.handwritten {
     font-family: 'DanaYad', cursive;
+}
+
+.btn_set {
+    margin: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+body.popup__show .popup {
+    display: flex;
+}
+
+.popup_body {
+    min-width: 50%;
+    padding: 10px;
+    background-color: #fff;
 }

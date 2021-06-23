@@ -19,13 +19,22 @@
 	<script src="script.js"></script>
 </head>
 <body>
-	<div class="places example">
-		<div class="place">
-			<div class="place_name">Letter name</div>
-			<div class="place_holder printed">Printed</div>
-			<div class="place_holder handwrited">Hand writed</div>
+	<div class="popup">
+		<div class="popup_body">
+			<p>When you start, your task will be put all letters on their places: printed to the left part, hand written - right</p>
+			<div class="places example">
+				<div class="place">
+					<div class="place_name">Letter name</div>
+					<div class="place_holder printed">Printed</div>
+					<div class="place_holder handwritten">Hand written</div>
+				</div>
+			</div>
+			<button class="btn btn__action" data-action="close_popup">Got it</button>
 		</div>
-		<button class="btn btn__start">Start</button>
+	</div>
+	<div class="btn_set">
+		<button class="btn btn__action" data-action="show_example">Show example</button>
+		<button class="btn btn__action" data-action="start">Start</button>
 	</div>
 	<hr>
 	<div class="places"></div>
