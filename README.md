@@ -1,6 +1,6 @@
 # Hebrew alphabet simulator
 
-Version: 1.1.0
+Version: 1.2.0
 
 ## Development
 
@@ -16,11 +16,6 @@ Version: 1.1.0
 
 ### Roadmap
 
-#### in 1.2.0
-
-- add footer with link to github repo
-- add header with title and buttons (start & help)
-
 #### in 1.3.0
 
 - use click instead drag & drop to move letters
@@ -32,14 +27,18 @@ Version: 1.1.0
 
 #### in 1.5.0
 
+- language switch
+
+#### in 1.6.0
+
 - to be continued...
 
 ### Change log
 
-#### 1.1.0
+#### 1.2.0
 
-- move example to popup
-- update .gitignore
+- add footer with link to github repo
+- add header with title and buttons (start & help)
 
 ## Additional info
 
@@ -52,5 +51,7 @@ Version: 1.1.0
 - [Handwritten font](https://alefalefalef.co.il/en/resources/פונטים-בחינם/)
 - [Hebrew alphabet](https://en.wikipedia.org/wiki/Hebrew_alphabet)
 - [Favicon generator](https://favicon.io/)
+- Icons
+    - GitHub icon made by [Pixel perfect](https://www.flaticon.com/authors/pixel-perfect) from [www.flaticon.com](https://www.flaticon.com/)
 
 Inspired by <http://mkipnis.ru/srv/srv_alphabet.php>
