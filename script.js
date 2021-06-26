@@ -24,31 +24,6 @@
 })(jQuery);
 
 $(function() {
-    // $.getJSON( './json/hebrew.json', function(data) {
-    //     const $places  = $('.places:not(.example)')
-
-    //     $.each(data, function(key, val) {
-    //         // key - alef
-    //         // val.symbol - א
-    //         // val.name - Alef
-
-    //         const symbol        = val.symbol
-    //         const name          = val.name
-
-    //         const $place        = $('<div></div>').addClass('place')
-    //         const $placeName    = $('<div></div>').addClass('place_name').text(name)
-    //         const $placeHolderP = $('<div></div>').addClass('place_holder achieved printed').data('place', key).data('type', 'printed')
-    //         const $placeHolderH = $('<div></div>').addClass('place_holder achieved handwritten').data('place', key).data('type', 'handwritten')
-    //         const $letterP      = $('<div></div>').addClass('letter printed').text(symbol).data('is', key).data('type', 'printed')
-    //         const $letterH      = $('<div></div>').addClass('letter handwritten').text(symbol).data('is', key).data('type', 'handwritten')
-
-    //         $placeHolderP.append($letterP)
-    //         $placeHolderH.append($letterH)
-    //         $place.append($placeName, $placeHolderP, $placeHolderH)
-    //         $places.append($place)
-    //     })
-    // });
-
     $('body').on('click', '.btn__action', function() {
         const action = $(this).data('action')
 
@@ -109,6 +84,33 @@ $(function() {
         })
     }
 
+    $('body').on('click', '.letter', function() {
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected')
+
+            return
+        }
+
+        $('.letter.selected').removeClass('selected')
+        $(this).addClass('selected')
+    })
+
+    $('body').on('click', '.place_holder', function() {
+        if ($(this).hasClass('achieved')) return
+
+        const $letter = $('.letter.selected')
+
+        if (0 === $('.letter.selected').length) return // show message "Choose letter first"
+
+        const placeType  = $(this).data('type')
+        const placeKey   = $(this).data('place')
+        const letterType = $letter.data('type')
+        const letterKey  = $letter.data('is')
+
+        if ( placeType !== letterType || placeKey !== letterKey ) wrongChoice()
+        else rightChoice($(this))
+    })
+
     function fromBeginning() {
         const $letters = $('.letters')
 
@@ -118,47 +120,23 @@ $(function() {
 
         $('.letters .letter').shuffle()
 
-        $('.letter').each(function() {
-            makeDraggable(this)
-        })
+        $('.letter.selected').removeClass('selected')
 
-        $('.place_holder.achieved').each(function() {
-            const type  = $(this).data('type')
-            const place = $(this).data('place')
-
-            makeDroppable(this, place, type)
-
-            $(this).removeClass('achieved')
-        })
+        $('.place_holder.achieved').removeClass('achieved')
     }
 
-    function makeDraggable(elem) {
-        $(elem).draggable({
-            cursor: 'move',
-            revert: 'invalid',
-        })
+    function wrongChoice() {
+        $('body').removeClass('wrong_choice right_choice animate_choice').addClass('wrong_choice animate_choice')
     }
 
-    function makeDroppable(elem, place, type) {
-        $(elem).droppable({
-            // tolerance: 'fit',
-            accept: function(draggable) {
-                if (place != $(draggable).data('is')) return false
-                if (type != $(draggable).data('type')) return false
+    function rightChoice($place) {
+        const $letter = $('.letter.selected')
 
-                return true
-            },
-            drop: function(event, ui) {
-                $(this).addClass('achieved').droppable('destroy')
-                $(ui.draggable[0]).draggable('destroy').css({
-                    'position': '',
-                    'left': '',
-                    'top': '',
-                })
+        $place.append($letter)
 
-                $(this).append($(ui.draggable[0]))
-            },
-        })
+        $place.addClass('achieved')
+        $letter.removeClass('selected')
+        $('body').removeClass('wrong_choice right_choice animate_choice').addClass('right_choice animate_choice')
     }
 
     function showPopup() {
