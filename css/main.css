@@ -37,6 +37,19 @@ body {
         "f";
 }
 
+body.right_choice {
+    --color-middle: var(--color-success);
+}
+
+body.wrong_choice {
+    --color-middle: var(--color-wrong);
+}
+
+body.animate_choice {
+    --color-start: var(--color-white);
+    animation: blink_background .3s;
+}
+
 header,
 footer {
     display: flex;
@@ -220,4 +233,13 @@ body.popup__show .popup {
 
 .btn_set {
     margin: 10px;
+}
+
+/* Animations
+------------------------------------------------------------*/
+
+@keyframes blink_background {
+    0%   { background-color: var(--color-start); }
+    50%  { background-color: var(--color-middle); }
+    100% { background-color: var(--color-start); }
 }

@@ -131,7 +131,8 @@ $(function() {
     }
 
     function wrongChoice() {
-        $('body').removeClass('wrong_choice right_choice animate_choice').addClass('wrong_choice animate_choice')
+        $('body').removeClass('wrong_choice right_choice animate_choice').addClass('wrong_choice')
+        setTimeout("$('body').addClass('animate_choice');", 100)
     }
 
     function rightChoice($place) {
@@ -142,7 +143,8 @@ $(function() {
 
         $place.addClass('achieved')
         $letter.removeClass('selected')
-        $('body').removeClass('wrong_choice right_choice animate_choice').addClass('right_choice animate_choice')
+        $('body').removeClass('wrong_choice right_choice animate_choice').addClass('right_choice')
+        setTimeout("$('body').addClass('animate_choice');", 100)
     }
 
     function showPopup() {
