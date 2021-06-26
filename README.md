@@ -15,10 +15,6 @@ Version: 1.3.0
 
 ### Roadmap
 
-#### in 1.4.0
-
-- adapt for mobile
-
 #### in 1.5.0
 
 - language switch
@@ -29,10 +25,9 @@ Version: 1.3.0
 
 ### Change log
 
-#### 1.3.0
+#### 1.4.0
 
-- use click instead drag & drop to move letters
-- show selected letter in header
+- adapt for mobile
 
 ## Additional info
 
