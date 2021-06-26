@@ -47,10 +47,13 @@ footer {
 
 header {
     grid-area: h;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-white);
     border-bottom: 1px solid var(--color-black);
 }
 
-.header_title {
+.header__title {
     margin: 0;
 }
 
@@ -151,6 +154,12 @@ img {
     height: 50px;
     background-color: var(--color-gray);
     font-size: 2rem;
+}
+
+.header__selected-letter .letter {
+    width: 25px;
+    height: 25px;
+    font-style: 1rem;
 }
 
 .letter.printed {

@@ -87,9 +87,12 @@ $(function() {
     $('body').on('click', '.letter', function() {
         if ($(this).hasClass('selected')) {
             $(this).removeClass('selected')
+            $('.header__selected-letter').html('')
 
             return
         }
+
+        $('.header__selected-letter').html($(this).clone())
 
         $('.letter.selected').removeClass('selected')
         $(this).addClass('selected')
@@ -114,6 +117,8 @@ $(function() {
     function fromBeginning() {
         const $letters = $('.letters')
 
+        $('.header__selected-letter').html('')
+
         $('.places .letter').each(function() {
             $letters.append($(this))
         })
@@ -133,6 +138,7 @@ $(function() {
         const $letter = $('.letter.selected')
 
         $place.append($letter)
+        $('.header__selected-letter').html('')
 
         $place.addClass('achieved')
         $letter.removeClass('selected')
