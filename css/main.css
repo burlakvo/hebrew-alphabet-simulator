@@ -21,6 +21,10 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 10px;
 }
@@ -255,8 +259,12 @@ body.popup__show .popup {
         height: 100vh;
     }
 
+    header {
+        height: 50px;
+    }
+
     .header__title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     main {
@@ -277,13 +285,13 @@ body.popup__show .popup {
     }
 
     .place_holder {
-        width: calc(100% - 2px);
+        width: 100%;
         height: 40px;
     }
 
     .place_holder .letter {
         width: 30px;
         height: 30px;
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 }
