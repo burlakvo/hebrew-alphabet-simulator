@@ -1,13 +1,12 @@
 # Hebrew alphabet simulator
 
-Version: 1.2.0
+Version: 1.3.0
 
 ## Development
 
 ### Ideas
 
 - timer
-- instruction
 - count mistakes
 - (?) letters near to get know letter height
 - congratulations at the end
@@ -15,11 +14,6 @@ Version: 1.2.0
 - use promise in js instead of `async:false`
 
 ### Roadmap
-
-#### in 1.3.0
-
-- use click instead drag & drop to move letters
-- show chosen letter in header
 
 #### in 1.4.0
 
@@ -35,10 +29,10 @@ Version: 1.2.0
 
 ### Change log
 
-#### 1.2.0
+#### 1.3.0
 
-- add footer with link to github repo
-- add header with title and buttons (start & help)
+- use click instead drag & drop to move letters
+- show selected letter in header
 
 ## Additional info
 
