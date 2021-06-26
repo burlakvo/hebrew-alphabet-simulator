@@ -7,6 +7,8 @@
  * Elements
  *     Links
  *     Buttons
+ * Media
+ *     768px
  */
 
 @font-face {
@@ -126,6 +128,7 @@ img {
 
 .place {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
         "n n"
         "p h";
@@ -242,4 +245,45 @@ body.popup__show .popup {
     0%   { background-color: var(--color-start); }
     50%  { background-color: var(--color-middle); }
     100% { background-color: var(--color-start); }
+}
+
+/* Media
+------------------------------------------------------------*/
+
+@media screen and (max-height: 768px) {
+    body {
+        height: 100vh;
+    }
+
+    .header__title {
+        font-size: 1.5rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        overflow: hidden;
+    }
+
+    .places,
+    .letters {
+        padding: 1px;
+        overflow-y: scroll;
+    }
+
+    .places {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .place_holder {
+        width: calc(100% - 2px);
+        height: 40px;
+    }
+
+    .place_holder .letter {
+        width: 30px;
+        height: 30px;
+        font-size: 1.5em;
+    }
 }
